@@ -45,7 +45,6 @@ export default function MintToForm() {
 
     const signature = await sendTransaction(transaction, connection);
 
-    // Estratégia de confirmação da transação
     const latestBlockhash = await connection.getLatestBlockhash();
     await connection.confirmTransaction(
       {
